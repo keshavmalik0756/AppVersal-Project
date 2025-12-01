@@ -29,35 +29,37 @@ export default function ScratchCard() {
     ctx.fillStyle = gradient
     ctx.fillRect(0, 0, width, height)
 
-    // Add sparkle effects
-    ctx.fillStyle = "rgba(255, 255, 255, 0.3)"
-    for (let i = 0; i < 30; i++) {
+    // Add pattern overlay for texture
+    ctx.fillStyle = "rgba(255, 255, 255, 0.05)"
+    for (let i = 0; i < 50; i++) {
       const x = Math.random() * width
       const y = Math.random() * height
-      const size = Math.random() * 3 + 1
+      const size = Math.random() * 4 + 2
       ctx.beginPath()
       ctx.arc(x, y, size, 0, Math.PI * 2)
       ctx.fill()
     }
 
-    // Add text with shadow
-    ctx.shadowColor = "rgba(0, 0, 0, 0.3)"
-    ctx.shadowBlur = 10
-    ctx.shadowOffsetX = 2
-    ctx.shadowOffsetY = 2
+    // Add bold text with strong shadow
+    ctx.shadowColor = "rgba(0, 0, 0, 0.5)"
+    ctx.shadowBlur = 15
+    ctx.shadowOffsetX = 3
+    ctx.shadowOffsetY = 3
     
-    ctx.fillStyle = "white"
-    ctx.font = 'bold 56px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+    ctx.fillStyle = "#FFFFFF"
+    ctx.font = 'bold 64px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
     ctx.textAlign = "center"
     ctx.textBaseline = "middle"
-    ctx.fillText("Scratch", width / 2, height / 2 - 100)
-    ctx.fillText("& Win!", width / 2, height / 2 - 30)
+    ctx.fillText("SCRATCH", width / 2, height / 2 - 110)
+    
+    ctx.font = 'bold 72px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+    ctx.fillText("& WIN!", width / 2, height / 2 - 30)
 
-    // Add basket icon with glow
-    ctx.shadowBlur = 20
-    ctx.shadowColor = "rgba(255, 255, 255, 0.5)"
-    ctx.font = "120px Arial"
-    ctx.fillText("🛒", width / 2, height / 2 + 100)
+    // Add basket icon with strong glow
+    ctx.shadowBlur = 25
+    ctx.shadowColor = "rgba(255, 255, 255, 0.8)"
+    ctx.font = "140px Arial"
+    ctx.fillText("🛒", width / 2, height / 2 + 110)
     
     // Reset shadow
     ctx.shadowBlur = 0
@@ -87,15 +89,15 @@ export default function ScratchCard() {
         imgCtx.arc(width + 30, height - 50, 120, 0, Math.PI * 2)
         imgCtx.fill()
 
-        // BigBasket Logo
+        // BigBasket Logo - More Visible
         imgCtx.fillStyle = "#84C225"
-        imgCtx.font = "bold 32px Arial, sans-serif"
+        imgCtx.font = "bold 38px Arial, sans-serif"
         imgCtx.textAlign = "center"
-        imgCtx.fillText("bigbasket", width / 2, 60)
+        imgCtx.fillText("bigbasket", width / 2, 55)
 
-        imgCtx.font = "bold 10px Arial, sans-serif"
+        imgCtx.font = "bold 11px Arial, sans-serif"
         imgCtx.fillStyle = "#5A8E19"
-        imgCtx.fillText("INDIA'S LARGEST ONLINE SUPERMARKET", width / 2, 78)
+        imgCtx.fillText("INDIA'S LARGEST ONLINE SUPERMARKET", width / 2, 75)
 
         // Decorative line
         imgCtx.strokeStyle = "#c7e89e"
@@ -105,87 +107,101 @@ export default function ScratchCard() {
         imgCtx.lineTo(width - 40, 95)
         imgCtx.stroke()
 
-        // Offer badge
+        // Offer badge - Larger and more prominent
+        imgCtx.shadowColor = "rgba(220, 50, 38, 0.3)"
+        imgCtx.shadowBlur = 10
+        imgCtx.shadowOffsetY = 4
+        
         imgCtx.fillStyle = "#DC3226"
         imgCtx.beginPath()
-        imgCtx.roundRect(width / 2 - 70, 110, 140, 45, 8)
-        imgCtx.fill()
-
-        imgCtx.fillStyle = "white"
-        imgCtx.font = 'bold 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-        imgCtx.fillText("FLAT ₹200 OFF", width / 2, 138)
-
-        // Main offer text
-        imgCtx.font = 'bold 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-        imgCtx.fillStyle = "#2D2D2D"
-        imgCtx.fillText("On Your First Order", width / 2, 180)
-
-        imgCtx.font = '13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-        imgCtx.fillStyle = "#666666"
-        imgCtx.fillText("Min Order Value: ₹1000", width / 2, 205)
-
-        // Fresh vegetables icons
-        imgCtx.font = "28px Arial"
-        imgCtx.fillText("🥬 🥕 🍅", width / 2, 240)
-
-        // Coupon code section with shadow
-        imgCtx.shadowColor = "rgba(0, 0, 0, 0.1)"
-        imgCtx.shadowBlur = 15
-        imgCtx.shadowOffsetY = 5
-        
-        imgCtx.fillStyle = "white"
-        imgCtx.beginPath()
-        imgCtx.roundRect(30, 260, width - 60, 90, 12)
+        imgCtx.roundRect(width / 2 - 85, 105, 170, 55, 10)
         imgCtx.fill()
 
         imgCtx.shadowBlur = 0
         imgCtx.shadowOffsetY = 0
 
-        // Dashed border
-        imgCtx.strokeStyle = "#84C225"
-        imgCtx.lineWidth = 2
-        imgCtx.setLineDash([5, 5])
+        imgCtx.fillStyle = "white"
+        imgCtx.font = 'bold 28px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+        imgCtx.fillText("FLAT ₹200 OFF", width / 2, 140)
+
+        // Main offer text - Bolder
+        imgCtx.font = 'bold 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+        imgCtx.fillStyle = "#1a1a1a"
+        imgCtx.fillText("On Your First Order", width / 2, 185)
+
+        imgCtx.font = 'bold 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+        imgCtx.fillStyle = "#DC3226"
+        imgCtx.fillText("Min Order Value: ₹1000", width / 2, 210)
+
+        // Fresh vegetables icons - Larger
+        imgCtx.font = "36px Arial"
+        imgCtx.fillText("🥬 🥕 🍅", width / 2, 250)
+
+        // Coupon code section with stronger shadow
+        imgCtx.shadowColor = "rgba(0, 0, 0, 0.15)"
+        imgCtx.shadowBlur = 20
+        imgCtx.shadowOffsetY = 6
+        
+        imgCtx.fillStyle = "white"
         imgCtx.beginPath()
-        imgCtx.roundRect(30, 260, width - 60, 90, 12)
+        imgCtx.roundRect(25, 275, width - 50, 100, 15)
+        imgCtx.fill()
+
+        imgCtx.shadowBlur = 0
+        imgCtx.shadowOffsetY = 0
+
+        // Solid border for better visibility
+        imgCtx.strokeStyle = "#84C225"
+        imgCtx.lineWidth = 3
+        imgCtx.beginPath()
+        imgCtx.roundRect(25, 275, width - 50, 100, 15)
         imgCtx.stroke()
-        imgCtx.setLineDash([])
 
         imgCtx.fillStyle = "#84C225"
-        imgCtx.font = '11px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+        imgCtx.font = 'bold 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
         imgCtx.textAlign = "center"
-        imgCtx.fillText("USE COUPON CODE", width / 2, 285)
+        imgCtx.fillText("USE COUPON CODE", width / 2, 300)
 
-        imgCtx.fillStyle = "#2D2D2D"
-        imgCtx.font = "bold 32px monospace"
-        imgCtx.fillText("BB200", width / 2, 320)
+        imgCtx.fillStyle = "#1a1a1a"
+        imgCtx.font = "bold 40px monospace"
+        imgCtx.fillText("BB200", width / 2, 340)
 
-        // Copy button
-        imgCtx.fillStyle = "#f0fde4"
+        // Copy button - More visible
+        imgCtx.fillStyle = "#84C225"
         imgCtx.beginPath()
-        imgCtx.roundRect(width / 2 + 55, 305, 32, 32, 8)
+        imgCtx.roundRect(width / 2 + 60, 320, 38, 38, 10)
         imgCtx.fill()
         
-        imgCtx.fillStyle = "#84C225"
-        imgCtx.font = "18px Arial"
-        imgCtx.fillText("📋", width / 2 + 71, 325)
+        imgCtx.fillStyle = "white"
+        imgCtx.font = "22px Arial"
+        imgCtx.fillText("📋", width / 2 + 79, 343)
 
-        // Claim button with BigBasket green
+        // Claim button with BigBasket green - More prominent
+        imgCtx.shadowColor = "rgba(132, 194, 37, 0.4)"
+        imgCtx.shadowBlur = 15
+        imgCtx.shadowOffsetY = 5
+        
         imgCtx.fillStyle = "#84C225"
         imgCtx.beginPath()
-        imgCtx.roundRect(30, 375, width - 60, 50, 8)
+        imgCtx.roundRect(25, 395, width - 50, 55, 10)
         imgCtx.fill()
+
+        imgCtx.shadowBlur = 0
+        imgCtx.shadowOffsetY = 0
 
         imgCtx.fillStyle = "white"
-        imgCtx.font = 'bold 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-        imgCtx.fillText("Shop Now 🛒", width / 2, 405)
+        imgCtx.font = 'bold 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+        imgCtx.fillText("Shop Now 🛒", width / 2, 427)
 
-        // Terms text
-        imgCtx.fillStyle = "#999999"
-        imgCtx.font = '10px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-        imgCtx.fillText("*T&C Apply | Valid for New Users Only", width / 2, 450)
+        // Terms text - More readable
+        imgCtx.fillStyle = "#666666"
+        imgCtx.font = 'bold 11px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+        imgCtx.fillText("*T&C Apply | Valid for New Users Only", width / 2, 465)
         
         // Validity
-        imgCtx.fillText("Valid till: 31st Dec 2025", width / 2, 470)
+        imgCtx.fillStyle = "#DC3226"
+        imgCtx.font = 'bold 11px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+        imgCtx.fillText("Valid till: 31st Dec 2025", width / 2, 483)
       }
     }
   }, [])
@@ -263,35 +279,37 @@ export default function ScratchCard() {
     ctx.fillStyle = gradient
     ctx.fillRect(0, 0, width, height)
 
-    // Add sparkle effects
-    ctx.fillStyle = "rgba(255, 255, 255, 0.3)"
-    for (let i = 0; i < 30; i++) {
+    // Add pattern overlay for texture
+    ctx.fillStyle = "rgba(255, 255, 255, 0.05)"
+    for (let i = 0; i < 50; i++) {
       const x = Math.random() * width
       const y = Math.random() * height
-      const size = Math.random() * 3 + 1
+      const size = Math.random() * 4 + 2
       ctx.beginPath()
       ctx.arc(x, y, size, 0, Math.PI * 2)
       ctx.fill()
     }
 
-    // Add text with shadow
-    ctx.shadowColor = "rgba(0, 0, 0, 0.3)"
-    ctx.shadowBlur = 10
-    ctx.shadowOffsetX = 2
-    ctx.shadowOffsetY = 2
+    // Add bold text with strong shadow
+    ctx.shadowColor = "rgba(0, 0, 0, 0.5)"
+    ctx.shadowBlur = 15
+    ctx.shadowOffsetX = 3
+    ctx.shadowOffsetY = 3
     
-    ctx.fillStyle = "white"
-    ctx.font = 'bold 56px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+    ctx.fillStyle = "#FFFFFF"
+    ctx.font = 'bold 64px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
     ctx.textAlign = "center"
     ctx.textBaseline = "middle"
-    ctx.fillText("Scratch", width / 2, height / 2 - 100)
-    ctx.fillText("& Win!", width / 2, height / 2 - 30)
+    ctx.fillText("SCRATCH", width / 2, height / 2 - 110)
+    
+    ctx.font = 'bold 72px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+    ctx.fillText("& WIN!", width / 2, height / 2 - 30)
 
-    // Add basket icon with glow
-    ctx.shadowBlur = 20
-    ctx.shadowColor = "rgba(255, 255, 255, 0.5)"
-    ctx.font = "120px Arial"
-    ctx.fillText("🛒", width / 2, height / 2 + 100)
+    // Add basket icon with strong glow
+    ctx.shadowBlur = 25
+    ctx.shadowColor = "rgba(255, 255, 255, 0.8)"
+    ctx.font = "140px Arial"
+    ctx.fillText("🛒", width / 2, height / 2 + 110)
     
     // Reset shadow
     ctx.shadowBlur = 0
@@ -330,22 +348,27 @@ export default function ScratchCard() {
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center gap-4 sm:gap-6 md:gap-8 w-full max-w-7xl mx-auto">
         {/* Title */}
-        <div className="text-center space-y-1 sm:space-y-2 px-4 animate-in fade-in slide-in-from-top duration-700">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl animate-pulse-slow">
-            🛒 Win Big on bigbasket!
+        <div className="text-center space-y-2 sm:space-y-3 px-4 animate-in fade-in slide-in-from-top duration-700">
+          <div className="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full border-2 border-white/40 mb-2">
+            <p className="text-white font-bold text-lg sm:text-xl">🎁 SPECIAL OFFER</p>
+          </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white drop-shadow-2xl animate-pulse-slow leading-tight">
+            Win ₹200 OFF<br/>on bigbasket!
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-green-100 animate-in fade-in delay-300">
-            Scratch the card to reveal your exclusive grocery coupon
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white font-semibold animate-in fade-in delay-300 bg-green-800/50 backdrop-blur-sm px-6 py-2 rounded-full inline-block">
+            🛒 Scratch & Save on Groceries
           </p>
           {!isScratched && scratchProgress > 0 && (
-            <div className="mt-4 animate-in fade-in slide-in-from-bottom">
-              <div className="bg-white/20 backdrop-blur-sm rounded-full h-3 w-48 mx-auto overflow-hidden border border-white/30">
+            <div className="mt-6 animate-in fade-in slide-in-from-bottom">
+              <div className="bg-white/30 backdrop-blur-sm rounded-full h-4 w-64 mx-auto overflow-hidden border-2 border-white/50 shadow-lg">
                 <div 
-                  className="h-full bg-gradient-to-r from-lime-400 to-green-500 transition-all duration-300 ease-out rounded-full"
+                  className="h-full bg-gradient-to-r from-lime-400 via-green-500 to-green-600 transition-all duration-300 ease-out rounded-full shadow-inner"
                   style={{ width: `${scratchProgress}%` }}
                 />
               </div>
-              <p className="text-green-200 text-sm mt-2 font-semibold">{Math.round(scratchProgress)}% Revealed</p>
+              <p className="text-white text-lg mt-3 font-bold bg-green-800/50 backdrop-blur-sm px-4 py-1 rounded-full inline-block">
+                {Math.round(scratchProgress)}% Revealed ✨
+              </p>
             </div>
           )}
         </div>
@@ -428,9 +451,9 @@ export default function ScratchCard() {
         {/* Instructions */}
         {!isScratched && (
           <div className="text-center px-4 animate-in fade-in delay-500">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 animate-bounce">
-              <span className="text-2xl animate-wiggle">👆</span>
-              <p className="text-white text-base sm:text-lg font-semibold">Scratch to reveal your offer</p>
+            <div className="inline-flex items-center gap-3 bg-white backdrop-blur-md px-8 py-4 rounded-2xl border-4 border-lime-400 shadow-2xl animate-bounce">
+              <span className="text-4xl animate-wiggle">👆</span>
+              <p className="text-green-800 text-lg sm:text-xl font-black">SCRATCH TO REVEAL!</p>
             </div>
           </div>
         )}
@@ -453,23 +476,23 @@ export default function ScratchCard() {
                 <p className="text-white text-2xl sm:text-3xl font-bold mb-2 animate-pulse-slow">Congratulations!</p>
                 <p className="text-green-100 text-sm sm:text-base mb-4">Your bigbasket coupon is ready</p>
                 
-                <div className="bg-white/20 backdrop-blur-sm rounded-xl p-3 mb-4 border border-white/30">
-                  <p className="text-green-200 text-xs mb-1">COUPON CODE</p>
-                  <p className="text-white text-2xl sm:text-3xl font-bold tracking-wider">BB200</p>
-                  <p className="text-green-200 text-xs mt-1">Save ₹200 on orders above ₹1000</p>
+                <div className="bg-white backdrop-blur-sm rounded-2xl p-4 mb-4 border-4 border-lime-400 shadow-xl">
+                  <p className="text-green-700 text-sm font-bold mb-1">COUPON CODE</p>
+                  <p className="text-green-800 text-3xl sm:text-4xl font-black tracking-wider">BB200</p>
+                  <p className="text-red-600 text-sm font-bold mt-2">💰 Save ₹200 on orders above ₹1000</p>
                 </div>
                 
                 <button
                   onClick={copyToClipboard}
-                  className="bg-gradient-to-r from-lime-500 to-green-600 text-white px-6 sm:px-8 py-3 rounded-lg font-bold hover:from-lime-600 hover:to-green-700 transition-all text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105 transform active:scale-95"
+                  className="bg-gradient-to-r from-lime-500 to-green-600 text-white px-8 sm:px-10 py-4 rounded-xl font-black hover:from-lime-600 hover:to-green-700 transition-all text-base sm:text-lg shadow-2xl hover:shadow-3xl hover:scale-110 transform active:scale-95 border-2 border-white"
                 >
                   {copied ? (
-                    <span className="flex items-center gap-2">
-                      <span className="text-xl">✓</span> Copied!
+                    <span className="flex items-center gap-3">
+                      <span className="text-2xl">✓</span> COPIED!
                     </span>
                   ) : (
-                    <span className="flex items-center gap-2">
-                      <span className="text-xl">📋</span> Copy Code & Shop
+                    <span className="flex items-center gap-3">
+                      <span className="text-2xl">📋</span> COPY & SHOP NOW
                     </span>
                   )}
                 </button>
