@@ -447,59 +447,6 @@ export default function ScratchCard() {
             </div>
           </div>
         </div>
-
-        {/* Instructions */}
-        {!isScratched && (
-          <div className="text-center px-4 animate-in fade-in delay-500">
-            <div className="inline-flex items-center gap-3 bg-white backdrop-blur-md px-8 py-4 rounded-2xl border-4 border-lime-400 shadow-2xl animate-bounce">
-              <span className="text-4xl animate-wiggle">👆</span>
-              <p className="text-green-800 text-lg sm:text-xl font-black">SCRATCH TO REVEAL!</p>
-            </div>
-          </div>
-        )}
-
-        {/* Success message */}
-        {isScratched && (
-          <div className="text-center space-y-3 animate-in slide-in-from-bottom duration-700 px-4">
-            <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md px-6 sm:px-8 py-4 sm:py-6 rounded-2xl sm:rounded-3xl border-2 border-white/30 relative shadow-2xl hover:shadow-green-500/50 transition-all duration-500 hover:scale-105">
-              {/* Close button */}
-              <button
-                onClick={handleClose}
-                className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-white to-green-100 text-green-900 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-110 hover:rotate-90 flex items-center justify-center font-bold text-xl sm:text-2xl border-2 border-white"
-                aria-label="Close"
-              >
-                ×
-              </button>
-              
-              <div className="animate-in zoom-in duration-500">
-                <div className="text-5xl sm:text-6xl mb-3 animate-bounce">🎉</div>
-                <p className="text-white text-2xl sm:text-3xl font-bold mb-2 animate-pulse-slow">Congratulations!</p>
-                <p className="text-green-100 text-sm sm:text-base mb-4">Your bigbasket coupon is ready</p>
-                
-                <div className="bg-white backdrop-blur-sm rounded-2xl p-4 mb-4 border-4 border-lime-400 shadow-xl">
-                  <p className="text-green-700 text-sm font-bold mb-1">COUPON CODE</p>
-                  <p className="text-green-800 text-3xl sm:text-4xl font-black tracking-wider">BB200</p>
-                  <p className="text-red-600 text-sm font-bold mt-2">💰 Save ₹200 on orders above ₹1000</p>
-                </div>
-                
-                <button
-                  onClick={copyToClipboard}
-                  className="bg-gradient-to-r from-lime-500 to-green-600 text-white px-8 sm:px-10 py-4 rounded-xl font-black hover:from-lime-600 hover:to-green-700 transition-all text-base sm:text-lg shadow-2xl hover:shadow-3xl hover:scale-110 transform active:scale-95 border-2 border-white"
-                >
-                  {copied ? (
-                    <span className="flex items-center gap-3">
-                      <span className="text-2xl">✓</span> COPIED!
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-3">
-                      <span className="text-2xl">📋</span> COPY & SHOP NOW
-                    </span>
-                  )}
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   )
