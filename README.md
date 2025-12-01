@@ -1,8 +1,8 @@
-# Scratch Card App
+# BigBasket Scratch Card App 🛒
 
-An interactive scratch card React application with a beautiful UI and smooth animations.
+An interactive scratch card React application with BigBasket theme, featuring smooth animations and engaging user experience.
 
-## Setup
+## 🚀 Quick Start
 
 1. **Install dependencies**
    ```bash
@@ -20,43 +20,74 @@ An interactive scratch card React application with a beautiful UI and smooth ani
    npm run build
    ```
 
-## Deploy to Vercel
+## 📦 Deploy to Vercel
 
-### Option 1: GitHub + Vercel (Recommended)
+### Automatic Deployment (Recommended)
 
-1. Push to GitHub:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git remote add origin https://github.com/keshavmalik0756/AppVersal-Project.git
-   git push -u origin main
-   ```
+1. **Connect to Vercel:**
+   - Go to [vercel.com](https://vercel.com)
+   - Click "Add New Project"
+   - Import: `keshavmalik0756/AppVersal-Project`
+   - Framework: **Vite** (auto-detected)
+   - Click "Deploy"
 
-2. Go to [vercel.com](https://vercel.com)
-3. Click "Add New Project"
-4. Import your repository
-5. Click "Deploy"
+2. **Vercel will automatically:**
+   - Detect Vite framework
+   - Run `npm install`
+   - Run `npm run build`
+   - Deploy from `dist/` folder
 
-### Option 2: Vercel CLI
+### Manual Deployment (CLI)
 
 ```bash
 npm i -g vercel
 vercel login
-vercel
+vercel --prod
 ```
 
-## Tech Stack
+## 🎨 Features
 
-- React 18
-- Vite
-- Tailwind CSS
-- Canvas API for scratch effect
+- ✅ BigBasket themed design with signature green colors
+- ✅ Interactive scratch card using Canvas API
+- ✅ Real-time scratch progress indicator
+- ✅ Confetti animation on win
+- ✅ Responsive design (mobile & desktop)
+- ✅ Touch support for mobile devices
+- ✅ Copy coupon code functionality
+- ✅ Smooth animations and transitions
 
-## Features
+## 🛠️ Tech Stack
 
-- Interactive scratch card with canvas
-- Responsive design
-- Mobile touch support
-- Smooth animations
-- Copy coupon code functionality
+- **React 18** - UI library
+- **Vite** - Build tool & dev server
+- **Tailwind CSS** - Styling
+- **Canvas API** - Scratch effect
+- **Vercel** - Deployment platform
+
+## 📁 Project Structure
+
+```
+AppVersal/
+├── src/
+│   ├── App.jsx          # Main scratch card component
+│   ├── main.jsx         # React entry point
+│   └── index.css        # Tailwind + custom animations
+├── public/              # Static assets
+├── index.html           # HTML template
+├── vercel.json          # Vercel configuration
+├── vite.config.js       # Vite configuration
+├── tailwind.config.js   # Tailwind configuration
+└── package.json         # Dependencies
+```
+
+## 🎯 Coupon Details
+
+- **Code:** BB200
+- **Discount:** Flat ₹200 OFF
+- **Min Order:** ₹1000
+- **Valid Till:** 31st Dec 2025
+- **For:** New Users Only
+
+## 🌐 Live Demo
+
+Deploy your own version on Vercel in minutes!
