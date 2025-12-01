@@ -6,7 +6,8 @@ export default function ScratchCard() {
   const canvasRef = useRef(null)
   const imageCanvasRef = useRef(null)
   const [isDrawing, setIsDrawing] = useState(false)
-  const [scratchPercentage, setScratchPercentage] = useState(0)
+  const [scratchProgress, setScratchProgress] = useState(0)
+  const [showConfetti, setShowConfetti] = useState(false)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -20,16 +21,16 @@ export default function ScratchCard() {
     canvas.width = width
     canvas.height = height
 
-    // Create gradient background
+    // Create gradient background - Ocean Blue Theme
     const gradient = ctx.createLinearGradient(0, 0, 0, height)
-    gradient.addColorStop(0, "#a855f7")
-    gradient.addColorStop(0.5, "#9333ea")
-    gradient.addColorStop(1, "#7e22ce")
+    gradient.addColorStop(0, "#0ea5e9")
+    gradient.addColorStop(0.5, "#0284c7")
+    gradient.addColorStop(1, "#0369a1")
     ctx.fillStyle = gradient
     ctx.fillRect(0, 0, width, height)
 
     // Add sparkle effects
-    ctx.fillStyle = "rgba(255, 255, 255, 0.3)"
+    ctx.fillStyle = "rgba(255, 255, 255, 0.4)"
     for (let i = 0; i < 30; i++) {
       const x = Math.random() * width
       const y = Math.random() * height
@@ -56,7 +57,7 @@ export default function ScratchCard() {
     ctx.shadowBlur = 20
     ctx.shadowColor = "rgba(255, 255, 255, 0.5)"
     ctx.font = "120px Arial"
-    ctx.fillText("🎁", width / 2, height / 2 + 100)
+    ctx.fillText("🎉", width / 2, height / 2 + 100)
     
     // Reset shadow
     ctx.shadowBlur = 0
@@ -70,15 +71,15 @@ export default function ScratchCard() {
         imageCanvas.width = width
         imageCanvas.height = height
 
-        // Create gradient background
+        // Create gradient background - Ocean Theme
         const gradient = imgCtx.createLinearGradient(0, 0, 0, height)
-        gradient.addColorStop(0, "#faf5ff")
-        gradient.addColorStop(1, "#f3e8ff")
+        gradient.addColorStop(0, "#e0f2fe")
+        gradient.addColorStop(1, "#bae6fd")
         imgCtx.fillStyle = gradient
         imgCtx.fillRect(0, 0, width, height)
 
         // Decorative circles
-        imgCtx.fillStyle = "rgba(168, 85, 247, 0.1)"
+        imgCtx.fillStyle = "rgba(14, 165, 233, 0.15)"
         imgCtx.beginPath()
         imgCtx.arc(-30, 50, 100, 0, Math.PI * 2)
         imgCtx.fill()
@@ -88,19 +89,19 @@ export default function ScratchCard() {
 
         // Logo with gradient
         const logoGradient = imgCtx.createLinearGradient(0, 40, 0, 80)
-        logoGradient.addColorStop(0, "#9333ea")
-        logoGradient.addColorStop(1, "#7e22ce")
+        logoGradient.addColorStop(0, "#0284c7")
+        logoGradient.addColorStop(1, "#0369a1")
         imgCtx.fillStyle = logoGradient
         imgCtx.font = "bold 36px Georgia, serif"
         imgCtx.textAlign = "center"
-        imgCtx.fillText("CLAY", width / 2, 70)
+        imgCtx.fillText("OCEAN", width / 2, 70)
 
         imgCtx.font = "bold 14px Georgia, serif"
-        imgCtx.fillStyle = "#a855f7"
-        imgCtx.fillText("Co.", width / 2 + 50, 65)
+        imgCtx.fillStyle = "#0ea5e9"
+        imgCtx.fillText("Store", width / 2 + 60, 65)
 
         // Decorative line
-        imgCtx.strokeStyle = "#e9d5ff"
+        imgCtx.strokeStyle = "#7dd3fc"
         imgCtx.lineWidth = 2
         imgCtx.beginPath()
         imgCtx.moveTo(40, 100)
@@ -108,14 +109,14 @@ export default function ScratchCard() {
         imgCtx.stroke()
 
         // Offer badge
-        imgCtx.fillStyle = "#9333ea"
+        imgCtx.fillStyle = "#0284c7"
         imgCtx.beginPath()
         imgCtx.roundRect(width / 2 - 60, 120, 120, 40, 20)
         imgCtx.fill()
 
         imgCtx.fillStyle = "white"
         imgCtx.font = 'bold 20px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-        imgCtx.fillText("20% OFF", width / 2, 145)
+        imgCtx.fillText("30% OFF", width / 2, 145)
 
         // Main offer text
         imgCtx.font = 'bold 26px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
@@ -123,8 +124,8 @@ export default function ScratchCard() {
         imgCtx.fillText("Special Discount", width / 2, 195)
 
         imgCtx.font = '14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-        imgCtx.fillStyle = "#6b7280"
-        imgCtx.fillText("+ Free Gift with ₹299 Purchase", width / 2, 220)
+        imgCtx.fillStyle = "#475569"
+        imgCtx.fillText("+ Free Shipping on Orders Over $50", width / 2, 220)
 
         // Coupon code section with shadow
         imgCtx.shadowColor = "rgba(0, 0, 0, 0.1)"
@@ -140,7 +141,7 @@ export default function ScratchCard() {
         imgCtx.shadowOffsetY = 0
 
         // Dashed border
-        imgCtx.strokeStyle = "#e9d5ff"
+        imgCtx.strokeStyle = "#7dd3fc"
         imgCtx.lineWidth = 2
         imgCtx.setLineDash([5, 5])
         imgCtx.beginPath()
@@ -148,29 +149,29 @@ export default function ScratchCard() {
         imgCtx.stroke()
         imgCtx.setLineDash([])
 
-        imgCtx.fillStyle = "#9333ea"
+        imgCtx.fillStyle = "#0284c7"
         imgCtx.font = '12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
         imgCtx.textAlign = "center"
         imgCtx.fillText("COUPON CODE", width / 2, 275)
 
-        imgCtx.fillStyle = "#1f2937"
+        imgCtx.fillStyle = "#0c4a6e"
         imgCtx.font = "bold 28px monospace"
-        imgCtx.fillText("CCBB20", width / 2, 310)
+        imgCtx.fillText("OCEAN30", width / 2, 310)
 
         // Copy button
-        imgCtx.fillStyle = "#f3e8ff"
+        imgCtx.fillStyle = "#bae6fd"
         imgCtx.beginPath()
         imgCtx.roundRect(width / 2 + 60, 295, 30, 30, 8)
         imgCtx.fill()
         
-        imgCtx.fillStyle = "#9333ea"
+        imgCtx.fillStyle = "#0284c7"
         imgCtx.font = "18px Arial"
         imgCtx.fillText("📋", width / 2 + 75, 313)
 
         // Claim button with gradient
         const btnGradient = imgCtx.createLinearGradient(0, 370, 0, 420)
-        btnGradient.addColorStop(0, "#a855f7")
-        btnGradient.addColorStop(1, "#9333ea")
+        btnGradient.addColorStop(0, "#0ea5e9")
+        btnGradient.addColorStop(1, "#0284c7")
         imgCtx.fillStyle = btnGradient
         imgCtx.beginPath()
         imgCtx.roundRect(30, 370, width - 60, 50, 25)
@@ -178,7 +179,7 @@ export default function ScratchCard() {
 
         imgCtx.fillStyle = "white"
         imgCtx.font = 'bold 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-        imgCtx.fillText("Claim Now 🎉", width / 2, 400)
+        imgCtx.fillText("Claim Now", width / 2, 400)
 
         // Terms text
         imgCtx.fillStyle = "#9ca3af"
@@ -226,23 +227,26 @@ export default function ScratchCard() {
     }
 
     const percentage = (transparentPixels / (data.length / 4)) * 100
-    setScratchPercentage(percentage)
+    setScratchProgress(Math.min(percentage, 100))
 
-    if (percentage > 50) {
+    if (percentage > 50 && !isScratched) {
       setIsScratched(true)
+      setShowConfetti(true)
+      setTimeout(() => setShowConfetti(false), 3000)
     }
   }
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText("CCBB20")
+    navigator.clipboard.writeText("OCEAN30")
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
 
   const handleClose = () => {
     setIsScratched(false)
-    setScratchPercentage(0)
     setCopied(false)
+    setScratchProgress(0)
+    setShowConfetti(false)
     
     // Redraw the scratch overlay
     const canvas = canvasRef.current
@@ -253,16 +257,16 @@ export default function ScratchCard() {
     const width = 300
     const height = 500
 
-    // Create gradient background
+    // Create gradient background - Ocean Blue Theme
     const gradient = ctx.createLinearGradient(0, 0, 0, height)
-    gradient.addColorStop(0, "#a855f7")
-    gradient.addColorStop(0.5, "#9333ea")
-    gradient.addColorStop(1, "#7e22ce")
+    gradient.addColorStop(0, "#0ea5e9")
+    gradient.addColorStop(0.5, "#0284c7")
+    gradient.addColorStop(1, "#0369a1")
     ctx.fillStyle = gradient
     ctx.fillRect(0, 0, width, height)
 
     // Add sparkle effects
-    ctx.fillStyle = "rgba(255, 255, 255, 0.3)"
+    ctx.fillStyle = "rgba(255, 255, 255, 0.4)"
     for (let i = 0; i < 30; i++) {
       const x = Math.random() * width
       const y = Math.random() * height
@@ -289,7 +293,7 @@ export default function ScratchCard() {
     ctx.shadowBlur = 20
     ctx.shadowColor = "rgba(255, 255, 255, 0.5)"
     ctx.font = "120px Arial"
-    ctx.fillText("🎁", width / 2, height / 2 + 100)
+    ctx.fillText("🎉", width / 2, height / 2 + 100)
     
     // Reset shadow
     ctx.shadowBlur = 0
@@ -298,29 +302,59 @@ export default function ScratchCard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 flex items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-sky-900 flex items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute top-20 sm:top-40 right-5 sm:right-10 w-48 h-48 sm:w-72 sm:h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-10 sm:-bottom-20 left-1/2 w-48 h-48 sm:w-72 sm:h-72 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute top-20 sm:top-40 right-5 sm:right-10 w-48 h-48 sm:w-72 sm:h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-10 sm:-bottom-20 left-1/2 w-48 h-48 sm:w-72 sm:h-72 bg-sky-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>
+
+      {/* Confetti Effect */}
+      {showConfetti && (
+        <div className="absolute inset-0 pointer-events-none z-50">
+          {[...Array(50)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 animate-confetti"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `-10px`,
+                backgroundColor: ['#0ea5e9', '#06b6d4', '#3b82f6', '#8b5cf6', '#ec4899'][Math.floor(Math.random() * 5)],
+                animationDelay: `${Math.random() * 0.5}s`,
+                animationDuration: `${2 + Math.random() * 2}s`,
+              }}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center gap-4 sm:gap-6 md:gap-8 w-full max-w-7xl mx-auto">
         {/* Title */}
-        <div className="text-center space-y-1 sm:space-y-2 px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl">
-            🎁 Win Amazing Rewards!
+        <div className="text-center space-y-1 sm:space-y-2 px-4 animate-in fade-in slide-in-from-top duration-700">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl animate-pulse-slow">
+            🌊 Win Ocean Rewards!
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-purple-200">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-cyan-200 animate-in fade-in delay-300">
             Scratch the card to reveal your exclusive coupon
           </p>
+          {!isScratched && scratchProgress > 0 && (
+            <div className="mt-4 animate-in fade-in slide-in-from-bottom">
+              <div className="bg-white/20 backdrop-blur-sm rounded-full h-3 w-48 mx-auto overflow-hidden border border-white/30">
+                <div 
+                  className="h-full bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 ease-out rounded-full"
+                  style={{ width: `${scratchProgress}%` }}
+                />
+              </div>
+              <p className="text-cyan-300 text-sm mt-2 font-semibold">{Math.round(scratchProgress)}% Revealed</p>
+            </div>
+          )}
         </div>
 
         {/* Phone Mockup */}
-        <div className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg transform hover:scale-105 transition-transform duration-300">
-          <div className="bg-gradient-to-b from-gray-900 to-black rounded-[2rem] sm:rounded-[3rem] shadow-2xl overflow-hidden border-[10px] sm:border-[14px] border-gray-900 relative">
+        <div className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg transform hover:scale-105 transition-all duration-500 animate-in zoom-in delay-200">
+          <div className="bg-gradient-to-b from-gray-900 to-black rounded-[2rem] sm:rounded-[3rem] shadow-2xl overflow-hidden border-[10px] sm:border-[14px] border-gray-900 relative hover:shadow-cyan-500/50 transition-shadow duration-500">
             {/* Camera notch */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-50">
               <div className="bg-black w-28 h-5 sm:w-40 sm:h-7 rounded-b-2xl sm:rounded-b-3xl flex items-center justify-center gap-1 sm:gap-2">
@@ -363,7 +397,7 @@ export default function ScratchCard() {
                     onTouchStart={() => setIsDrawing(true)}
                     onTouchEnd={() => setIsDrawing(false)}
                     onTouchMove={handleScratch}
-                    className="cursor-pointer rounded-xl sm:rounded-2xl shadow-2xl relative z-10 hover:shadow-purple-500/50 transition-shadow max-w-[240px] sm:max-w-[300px]"
+                    className="cursor-pointer rounded-xl sm:rounded-2xl shadow-2xl relative z-10 hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 max-w-[240px] sm:max-w-[300px]"
                     style={{
                       touchAction: "none",
                       width: "100%",
@@ -395,32 +429,52 @@ export default function ScratchCard() {
 
         {/* Instructions */}
         {!isScratched && (
-          <div className="text-center animate-bounce px-4">
-            <p className="text-white text-base sm:text-lg font-semibold">👆 Scratch to reveal</p>
+          <div className="text-center px-4 animate-in fade-in delay-500">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 animate-bounce">
+              <span className="text-2xl animate-wiggle">👆</span>
+              <p className="text-white text-base sm:text-lg font-semibold">Scratch to reveal</p>
+            </div>
           </div>
         )}
 
         {/* Success message */}
         {isScratched && (
           <div className="text-center space-y-3 animate-in slide-in-from-bottom duration-700 px-4">
-            <div className="bg-white/10 backdrop-blur-md px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl border border-white/20 relative">
+            <div className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md px-6 sm:px-8 py-4 sm:py-6 rounded-2xl sm:rounded-3xl border-2 border-white/30 relative shadow-2xl hover:shadow-cyan-500/50 transition-all duration-500 hover:scale-105">
               {/* Close button */}
               <button
                 onClick={handleClose}
-                className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-8 h-8 sm:w-10 sm:h-10 bg-white text-purple-900 rounded-full shadow-lg hover:bg-purple-100 transition-all hover:scale-110 flex items-center justify-center font-bold text-lg sm:text-xl"
+                className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-white to-cyan-100 text-cyan-900 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-110 hover:rotate-90 flex items-center justify-center font-bold text-xl sm:text-2xl border-2 border-white"
                 aria-label="Close"
               >
                 ×
               </button>
               
-              <p className="text-white text-xl sm:text-2xl font-bold mb-2">🎉 Congratulations!</p>
-              <p className="text-purple-200 text-sm sm:text-base">Your exclusive coupon is ready to use</p>
-              <button
-                onClick={copyToClipboard}
-                className="mt-3 sm:mt-4 bg-white text-purple-900 px-5 sm:px-6 py-2 rounded-full font-semibold hover:bg-purple-100 transition-colors text-sm sm:text-base"
-              >
-                {copied ? "✓ Copied!" : "Copy Code"}
-              </button>
+              <div className="animate-in zoom-in duration-500">
+                <div className="text-5xl sm:text-6xl mb-3 animate-bounce">🎉</div>
+                <p className="text-white text-2xl sm:text-3xl font-bold mb-2 animate-pulse-slow">Congratulations!</p>
+                <p className="text-cyan-200 text-sm sm:text-base mb-4">Your exclusive coupon is ready to use</p>
+                
+                <div className="bg-white/20 backdrop-blur-sm rounded-xl p-3 mb-4 border border-white/30">
+                  <p className="text-cyan-300 text-xs mb-1">COUPON CODE</p>
+                  <p className="text-white text-2xl sm:text-3xl font-bold tracking-wider">OCEAN30</p>
+                </div>
+                
+                <button
+                  onClick={copyToClipboard}
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 sm:px-8 py-3 rounded-full font-bold hover:from-cyan-600 hover:to-blue-600 transition-all text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105 transform active:scale-95"
+                >
+                  {copied ? (
+                    <span className="flex items-center gap-2">
+                      <span className="text-xl">✓</span> Copied!
+                    </span>
+                  ) : (
+                    <span className="flex items-center gap-2">
+                      <span className="text-xl">📋</span> Copy Code
+                    </span>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         )}
