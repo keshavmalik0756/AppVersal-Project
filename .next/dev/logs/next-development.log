@@ -1,0 +1,189 @@
+[00:00:01.910] Server  LOG      ✓ Ready in 1290ms
+[00:00:07.540] Server  LOG      ○ Compiling / ...
+[00:00:09.331] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:09.743] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:09.743] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:09.743] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764574953908}
+[00:00:23.827] Server  LOG      ✓ Compiled in 212ms
+[00:00:59.425] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:59.611] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:59.611] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:59.611] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764575003783}
+[00:01:10.627] Server  LOG      ✓ Compiled in 421ms
+[00:01:20.274] Server  LOG      ✓ Compiled in 425ms
+[00:01:26.979] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:27.106] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:27.106] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:27.106] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764575031278}
+[00:01:35.777] Server  LOG      ✓ Compiled in 280ms
+[00:01:35.888] Browser ERROR   ./OneDrive/Desktop/AppVersal/app/page.tsx:250:9
+Ecmascript file had an error
+  248 |   }
+  249 |
+> 250 |   const bgColors = {
+      |         ^^^^^^^^
+  251 |     purple: "from-purple-900 via-purple-800 to-indigo-900",
+  252 |     violet: "from-violet-900 via-purple-900 to-fuchsia-900",
+  253 |     deep: "from-indigo-950 via-purple-950 to-purple-900",
+
+the name `bgColors` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component Browser]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component SSR]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+[00:01:41.730] Browser ERROR   ./OneDrive/Desktop/AppVersal/app/page.tsx:250:9
+Ecmascript file had an error
+  248 |   }
+  249 |
+> 250 |   const bgColors = {
+      |         ^^^^^^^^
+  251 |     purple: "from-purple-900 via-purple-800 to-indigo-900",
+  252 |     violet: "from-violet-900 via-purple-900 to-fuchsia-900",
+  253 |     deep: "from-indigo-950 via-purple-950 to-purple-900",
+
+the name `bgColors` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component Browser]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component SSR]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+[00:01:41.892] Server  LOG      ✓ Compiled in 109ms
+[00:01:42.724] Browser ERROR   ./OneDrive/Desktop/AppVersal/app/page.tsx:252:9
+Ecmascript file had an error
+  250 |   }
+  251 |
+> 252 |   const bgColors = {
+      |         ^^^^^^^^
+  253 |     purple: "from-purple-900 via-purple-800 to-indigo-900",
+  254 |     violet: "from-violet-900 via-purple-900 to-fuchsia-900",
+  255 |     deep: "from-indigo-950 via-purple-950 to-purple-900",
+
+the name `bgColors` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component Browser]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component SSR]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+[00:01:42.724] Browser ERROR   ./OneDrive/Desktop/AppVersal/app/page.tsx:252:9
+Ecmascript file had an error
+  250 |   }
+  251 |
+> 252 |   const bgColors = {
+      |         ^^^^^^^^
+  253 |     purple: "from-purple-900 via-purple-800 to-indigo-900",
+  254 |     violet: "from-violet-900 via-purple-900 to-fuchsia-900",
+  255 |     deep: "from-indigo-950 via-purple-950 to-purple-900",
+
+the name `bgColors` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component Browser]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component SSR]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+[00:01:48.150] Browser ERROR   ./OneDrive/Desktop/AppVersal/app/page.tsx:252:9
+Ecmascript file had an error
+  250 |   }
+  251 |
+> 252 |   const bgColors = {
+      |         ^^^^^^^^
+  253 |     purple: "from-purple-900 via-purple-800 to-indigo-900",
+  254 |     violet: "from-violet-900 via-purple-900 to-fuchsia-900",
+  255 |     deep: "from-indigo-950 via-purple-950 to-purple-900",
+
+the name `bgColors` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component Browser]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component SSR]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+[00:01:48.439] Server  LOG      ✓ Compiled in 182ms
+[00:01:48.547] Browser ERROR   ./OneDrive/Desktop/AppVersal/app/page.tsx:252:9
+Ecmascript file had an error
+  250 |   }
+  251 |
+> 252 |   const bgColors = {
+      |         ^^^^^^^^
+  253 |     purple: "from-purple-900 via-purple-800 to-indigo-900",
+  254 |     violet: "from-violet-900 via-purple-900 to-fuchsia-900",
+  255 |     deep: "from-indigo-950 via-purple-950 to-purple-900",
+
+the name `bgColors` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component Browser]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component SSR]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+[00:01:54.298] Browser ERROR   ./OneDrive/Desktop/AppVersal/app/page.tsx:252:9
+Ecmascript file had an error
+  250 |   }
+  251 |
+> 252 |   const bgColors = {
+      |         ^^^^^^^^
+  253 |     purple: "from-purple-900 via-purple-800 to-indigo-900",
+  254 |     violet: "from-violet-900 via-purple-900 to-fuchsia-900",
+  255 |     deep: "from-indigo-950 via-purple-950 to-purple-900",
+
+the name `bgColors` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component Browser]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Client Component SSR]
+    ./OneDrive/Desktop/AppVersal/app/page.tsx [Server Component]
+[00:02:16.808] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:16.960] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:16.960] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:16.960] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764575081122}
+[00:03:44.903] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:45.132] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:03:45.132] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:03:45.132] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764575169294}
+[00:06:01.543] Server  LOG      ✓ Compiled in 171ms
+[00:06:01.768] Browser ERROR   uncaughtError: ReferenceError: bgColors is not defined
+[00:06:49.446] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:06:49.458] Server  LOG      ✓ Compiled in 260ms
+[00:06:49.847] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764575353754}
+[00:06:50.648] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:51.726] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:51.726] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:06:51.726] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764575355197}
+[00:09:43.419] Server  LOG      ✓ Compiled in 167ms
+[00:09:45.339] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:45.549] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:09:45.549] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:09:45.549] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764575529720}
+[00:09:56.320] Server  LOG      ✓ Compiled in 296ms
+[00:10:12.366] Server  LOG      ✓ Compiled in 236ms
+[00:10:23.136] Server  LOG      ✓ Compiled in 160ms
+[00:11:30.315] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:30.575] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:11:30.575] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:11:30.575] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764575634747}
